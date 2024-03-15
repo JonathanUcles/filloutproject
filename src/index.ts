@@ -4,7 +4,7 @@ import { FilterClauseType, Questions, Condition, APIResponseData } from '../type
 dotenv.config()
 
 const app:Application = express()
-const port =3000;
+const port = 3000;
 app.get('/',(req:Request,res:Response)=>{
     res.send('hello world')
 })
@@ -81,6 +81,6 @@ app.get('/:formId/filteredResponses', async (req:Request,res:Response)=>{
     }
     
 })
-app.listen(port,()=>{
+app.listen(port,"0.0.0.0",()=>{
     console.log(`Server Connected on ${port}`)
 })
