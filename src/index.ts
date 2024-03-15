@@ -4,7 +4,7 @@ import { FilterClauseType, Questions, Condition, APIResponseData } from '../type
 dotenv.config()
 
 const app:Application = express()
-const port = 3000;
+const port = parseInt(`${process.env.PORT}`) || 3000;
 app.get('/',(req:Request,res:Response)=>{
     res.send('hello world')
 })
