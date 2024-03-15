@@ -5,8 +5,9 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "build": "tsc",
-    "start": "npx tsc && node build/index.js",
+    "dev":"npx tsc && node build/index.js",
+    "build":"npx tsc ",
+    "start": "node build/index.js --omit=dev",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
